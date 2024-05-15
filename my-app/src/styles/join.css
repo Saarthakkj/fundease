@@ -1,0 +1,27 @@
+.join-form {
+    display: flex;
+    flex-direction: column; /* Aligns children (input fields) in a column */
+    align-items: center; /* Centers the input fields horizontally */
+    width: 100%; /* Ensures form uses full container width */
+    max-width: 500px; /* Optionally restricts form width for aesthetics */
+    margin: 20px auto; /* Centers the form on the page with top and bottom margin */
+}
+
+.join-input, .App-button {
+    width: 90%; /* Sets a consistent width for all inputs */
+    padding: 12px; /* Good padding makes inputs easier to interact with */
+    margin-bottom: 15px; /* Adds space between each form element */
+    box-sizing: border-box; /* Includes padding and border in width */
+}
+
+.App-button {
+    cursor: pointer; /* Changes the mouse cursor to a pointer to indicate it's clickable */
+    background-color: #6200EE; /* Example button color */
+    color: white;
+    border: none;
+    border-radius: 4px; /* Rounded corners for the button */
+}
+
+.App-button:hover {
+    background-color: #3700B3; /* Darker shade on hover */
+}

@@ -1,10 +1,12 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import '../styles/CampaignDetail.css'; // Ensure the CSS file is linked
+import '../styles/CampaignDetail.css';
+import { useCampaigns } from '../contexts/CampaignsContext'; // Import the context hook
 
-function CampaignDetail({ campaigns }) {
+function CampaignDetail() {
     const { campaignId } = useParams();
-    const campaign = campaigns.find(c => c.id === parseInt(campaignId));
+    const { campaigns } = useCampaigns(); // Get campaigns from context
+    const campaign = campaigns ? campaigns.find(c => c.id === parseInt(campaignId)) : null;
 
     if (!campaign) {
         return <div>Campaign not found</div>;

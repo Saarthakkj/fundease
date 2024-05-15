@@ -1,127 +1,66 @@
-body, html {
+/* Resets to remove any default margins and padding */
+html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background: #161616;
-  color: white;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  background-color: #161616; /* Cyan color */
 }
 
-.App-header {
+/* Ensures the App component covers the entire viewport */
+.App {
+  /*text-align: right;*/
+  min-height: 100vh; /* Ensures the app fills at least the whole height of the viewport */
   display: flex;
-  justify-content: space-between; /* Distributes space between and around content items */
-  align-items: center;
+  flex-direction: column; /* Stacks children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
   width: 100%;
+  background-color: #161616; /* Cyan color */
+}
+.App-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #161616;
+  color: white;
+  padding: 20px 0;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  max-width: 600px; /* Adjust based on your design preference */
 }
 
 .App-logo {
-  height: 300px;
-  margin-right: 20px;
+  width: 300px; /* Adjust size as necessary */
+  height: auto;
+  margin-right: 20px; /* Reduced space between image and text */
 }
 
 .text-and-buttons {
   display: flex;
-  flex-direction: column; /* Stacks children vertically */
-  align-items: flex-start; /* Aligns children to the start (left) */
+  flex-direction: column;
+  align-items: flex-start;
 }
 
+
 .App-button {
-  background: white;
-  color: black;
+  margin-top: 10px;
+  width: 150px; /* Set a specific width */
+  padding: 10px 20px;
+  background-color: yellow;
+  color: white;
+  border-radius: 10px;
   border: none;
-  padding: 12px 20px; /* Increase padding for larger */
-  width: 220%; /*Make buttons take the full width of their container */
-  margin: 10px 0; /* Only vertical margin to separate the buttons */
-  border-radius: 25px; /* Larger border-radius for rounded edges*/
   cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
-  outline: none; /* Remove outline on focus */
+  text-align: center; /* Center the text inside the button */
 }
 
 .App-button:hover {
-  background: black;
-  color: white;
-}
-.text-and-buttons {
-  display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  width: 100%; 
-}
-
-/* This targets the container specifically wrapping the text, if it exists. 
-   If it doesn't, you might need to add one in your JSX as shown below. */
-.text-container {
-  text-align: center; 
-  width: 100%;  
-}
-
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 300px;
-  margin: auto;
-}
-
-.login-input {
-  background: transparent;
-  border: 1px solid white;
-  border-radius: 5px;
-  color: white;
-  padding: 12px 20px;
-  margin: 10px 0;
-  width: 100%;
-  font-size: 16px;
-  outline: none;
-}
-
-.App-button {
-  background: white;
-  color: black;
-  border: none;
-  padding: 12px 20px;
-  margin-top: 20px;
-  width: 100%;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.App-button:hover {
-  background: black;
-  color: white;
-}
-
-.App-header h1 {
-  margin-bottom: 20px;  /* Adjust as needed to provide spacing between the heading and form */
-}
-.join-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 300px;  /* Adjust based on design needs */
-  margin: auto;  /* Center the form on the page */
-}
-
-.join-input {
-  background: transparent;
-  border: 1px solid white;
-  border-radius: 5px;
-  color: white;
-  padding: 12px 20px;
-  margin: 10px 0;
-  width: 100%;
-  font-size: 16px;
-  outline: none;
-}
-
-.join-input::placeholder {
-  color: #ccc;
+  background-color: purple;
 }

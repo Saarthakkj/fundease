@@ -1,25 +1,33 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+import { FaPlus, FaSearch } from 'react-icons/fa';
 import '../styles/Dashboard.css';
+import { useCampaigns } from '../contexts/CampaignsContext'; // Import the context hook
 
 function Dashboard() {
-    const user = { name: "John Doe" };
-    const campaigns = [
-        { id: 1, title: "Powered Kits Learning Boxes", description: "Fun, durable and reusable boxes with educational kits.", daysLeft: 6, amountRaised: 0.01, goal: 1, category: "Education" },
-        { id: 2, title: "Building Hope Village", description: "Together we can create access for everyone", daysLeft: 34, amountRaised: 0, goal: 10, category: "Education" },
-        // More campaigns can be added here
-    ];
+    const { name } = useParams();
+    const { campaigns } = useCampaigns(); // Get campaigns from context
 
     return (
         <div className="dashboard">
-            <nav className="navbar">
-                <input type="text" placeholder="Search for campaigns" className="search-input" />
-                <button className="btn">Search</button>
-                <Link to="/create-campaign"><button className="btn">Create a Campaign</button></Link>
-                <Link to="/browse-campaigns"><button className="btn">Browse Campaigns</button></Link>
-            </nav>
             <div className="header-content">
-                <h1 className="welcome-title">Welcome, {user.name}</h1>
+                <div className="header-top">
+                    <h1 className="welcome-title">Welcome, {name}</h1>
+                </div>
+                <div>
+                    <nav className="navbar">
+                        <input type="text" placeholder="Search for campaigns" className="search-input" />
+                        <button className="btn"><FaSearch /> Search</button>
+                    </nav>
+                </div>
+                <div className="button-container">
+                    <Link to="/create-campaign">
+                        <button className="btn"><FaPlus /> Create a Campaign</button>
+                    </Link>
+                    <Link to="/browse-campaigns">
+                        <button className="btn">Browse Campaigns</button>
+                    </Link>
+                </div>
                 <h2 className="your-campaigns">Your Campaigns</h2>
             </div>
             <div className="campaign-grid">
