@@ -1,0 +1,60 @@
+
+.dashboard {
+    box-sizing: border-box;
+    color: white;
+    padding: 20px;
+    min-height: 100%; /* Ensure it takes at least the full height of the viewport */
+    width: 100%; /* Ensure it takes the full width */
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1px;
+    padding-bottom: 10px;
+}
+
+.search-input, .btn {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.header-content {
+    text-align: left; /* Align text to the left */
+}
+
+.welcome-title {
+    font-size: 36px; /* Very large font size as requested */
+    margin-bottom: 0; /* Adjust based on your preference */
+    margin-top: 20px; /* Adds space above the title */
+}
+
+.your-campaigns {
+    font-size: 24px;
+    margin-bottom: 20px; /* Adds space below the sub-header */
+}
+
+.campaign-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.campaign-card {
+    background: #333;
+    padding: 15px;
+    width: calc(25% - 20px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
