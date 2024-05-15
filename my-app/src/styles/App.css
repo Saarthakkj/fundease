@@ -1,0 +1,106 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #161616;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-between; /* Distributes space between and around content items */
+  align-items: center;
+  width: 100%;
+}
+
+.App-logo {
+  height: 300px;
+  margin-right: 20px;
+}
+
+.text-and-buttons {
+  display: flex;
+  flex-direction: column; /* Stacks children vertically */
+  align-items: flex-start; /* Aligns children to the start (left) */
+}
+
+.App-button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 12px 20px; /* Increase padding for larger */
+  width: 220%; /*Make buttons take the full width of their container */
+  margin: 10px 0; /* Only vertical margin to separate the buttons */
+  border-radius: 25px; /* Larger border-radius for rounded edges*/
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none; /* Remove outline on focus */
+}
+
+.App-button:hover {
+  background: black;
+  color: white;
+}
+.text-and-buttons {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  width: 100%; 
+}
+
+/* This targets the container specifically wrapping the text, if it exists. 
+   If it doesn't, you might need to add one in your JSX as shown below. */
+.text-container {
+  text-align: center; 
+  width: 100%;  
+}
+
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+}
+
+.login-input {
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  padding: 12px 20px;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+}
+
+.App-button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 12px 20px;
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.App-button:hover {
+  background: black;
+  color: white;
+}
+
+.App-header h1 {
+  margin-bottom: 20px;  /* Adjust as needed to provide spacing between the heading and form */
+}
